@@ -1,0 +1,73 @@
+name: Daily Financial Stress Radar
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: financial-radar
+  cancel-in-progress: false
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: Asia/Shanghai
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run radar
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$FRED_API_KEY" ]; then
+            echo "::error::Missing FRED_API_KEY secret"
+            exit 1
+          fi
+
+          SCRIPT=$(find . -type f -path "*/scripts/radar.py" -print -quit)
+          if [ -z "$SCRIPT" ]; then
+            echo "::error::Cannot find scripts/radar.py"
+            exit 1
+          fi
+
+          STAMP=$(date +%Y-%m-%d_%H%M%S)
+          mkdir -p "reports/$STAMP" logs
+
+          python "$SCRIPT" \
+            --mode beginner \
+            --output-dir "reports/$STAMP" \
+            2>&1 | tee "logs/$STAMP.log"
+
+      - name: Save reports and logs
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for folder in reports logs; do
+            if [ -d "$folder" ]; then
+              git add -f "$folder"
+            fi
+          done
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Save radar results $(date +%Y-%m-%d_%H%M%S)"
+            git push
+          fi
