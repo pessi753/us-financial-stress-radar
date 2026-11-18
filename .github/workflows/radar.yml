@@ -3,6 +3,7 @@ name: Daily Financial Stress Radar
 on:
   schedule:
     - cron: "0 12 * * *"
+    - cron: "17 12 * * *"
   workflow_dispatch:
 
 permissions:
@@ -22,13 +23,34 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
+      - name: Check today's report
+        id: daily
+        shell: bash
+        run: |
+          today=$(TZ=Asia/Shanghai date +%F)
+          complete=false
+          for report in reports/"${today}"_*/"${today}"-beginner.json; do
+            [[ -s "$report" && -s "${report%.json}.md" ]] || continue
+            if jq -e --arg day "$today" '
+              .as_of == $day and .mode == "beginner" and
+              .demo == false and .errors == {} and .summary.coverage == 1
+            ' "$report" > /dev/null; then
+              complete=true
+              break
+            fi
+          done
+          echo "complete=$complete" >> "$GITHUB_OUTPUT"
+
       - name: Run radar
+        if: github.event_name != 'schedule' || steps.daily.outputs.complete != 'true'
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         shell: bash
