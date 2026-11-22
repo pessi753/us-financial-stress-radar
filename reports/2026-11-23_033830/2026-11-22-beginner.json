@@ -1,0 +1,963 @@
+{
+  "schema_version": 1,
+  "methodology_version": "1.0.0",
+  "demo": false,
+  "as_of": "2026-11-22",
+  "generated_at_utc": "2026-11-22T19:38:30.689480+00:00",
+  "mode": "beginner",
+  "provenance": {
+    "BAMLC0A4CBBB": {
+      "source": "FRED",
+      "series_id": "BAMLC0A4CBBB",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "BAMLH0A0HYM2": {
+      "source": "FRED",
+      "series_id": "BAMLH0A0HYM2",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "BAMLH0A1HYBB": {
+      "source": "FRED",
+      "series_id": "BAMLH0A1HYBB",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "BAMLH0A2HYB": {
+      "source": "FRED",
+      "series_id": "BAMLH0A2HYB",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "BAMLH0A3HYC": {
+      "source": "FRED",
+      "series_id": "BAMLH0A3HYC",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "DFII10": {
+      "source": "FRED",
+      "series_id": "DFII10",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "DPSACBW027SBOG": {
+      "source": "FRED",
+      "series_id": "DPSACBW027SBOG",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "EFFR": {
+      "source": "FRED",
+      "series_id": "EFFR",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "IORB": {
+      "source": "FRED",
+      "series_id": "IORB",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "NFCI": {
+      "source": "FRED",
+      "series_id": "NFCI",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "SOFR": {
+      "source": "FRED",
+      "series_id": "SOFR",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "STLFSI4": {
+      "source": "FRED",
+      "series_id": "STLFSI4",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "T10Y2Y": {
+      "source": "FRED",
+      "series_id": "T10Y2Y",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "T10Y3M": {
+      "source": "FRED",
+      "series_id": "T10Y3M",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "TOTBKCR": {
+      "source": "FRED",
+      "series_id": "TOTBKCR",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "VIXCLS": {
+      "source": "FRED",
+      "series_id": "VIXCLS",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "WLCFLPCL": {
+      "source": "FRED",
+      "series_id": "WLCFLPCL",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    },
+    "WRESBAL": {
+      "source": "FRED",
+      "series_id": "WRESBAL",
+      "as_of": "2026-11-22",
+      "retrieved_at": "2026-11-22T19:38:30.689480+00:00"
+    }
+  },
+  "cleaning_rejected": {
+    "BAMLC0A4CBBB": 8,
+    "BAMLH0A0HYM2": 8,
+    "BAMLH0A1HYBB": 8,
+    "BAMLH0A2HYB": 8,
+    "BAMLH0A3HYC": 8,
+    "DFII10": 86,
+    "DPSACBW027SBOG": 0,
+    "EFFR": 78,
+    "IORB": 0,
+    "NFCI": 0,
+    "SOFR": 89,
+    "STLFSI4": 0,
+    "T10Y2Y": 86,
+    "T10Y3M": 86,
+    "TOTBKCR": 0,
+    "VIXCLS": 42,
+    "WLCFLPCL": 0,
+    "WRESBAL": 0
+  },
+  "errors": {},
+  "summary": {
+    "financial_stress_score": 74.57747748500348,
+    "stress_level": "watch",
+    "modules": {
+      "Funding": 81.79384203480589,
+      "Credit": 91.81201550387597,
+      "Banking": 56.08974358974359,
+      "Market": 63.01990161001789,
+      "Macro": 59.14478365687822
+    },
+    "coverage": 1.0,
+    "module_coverage": {
+      "Funding": 1.0,
+      "Credit": 1.0,
+      "Banking": 1.0,
+      "Market": 1.0,
+      "Macro": 1.0
+    },
+    "confirmation": "cross_market_pressure",
+    "confirmation_signals": {
+      "Funding": true,
+      "Credit": true,
+      "Banking": false,
+      "Market": true
+    },
+    "transmission_chain": {
+      "CCC": true,
+      "HY": true,
+      "BBB": true,
+      "Funding": true,
+      "Banks": false
+    },
+    "transmission_caveat": "这是不同更新频率下的共现核对，不证明风险沿箭头先后传播或存在因果关系。"
+  },
+  "indicators": [
+    {
+      "id": "sofr_effr",
+      "status": "ok",
+      "observation_date": "2026-11-19",
+      "current": 3.000000000000025,
+      "deltas": {
+        "1D": 1.000000000000023,
+        "5D": 1.000000000000023,
+        "20D": 3.000000000000025,
+        "60D": 1.000000000000023
+      },
+      "weekly_deltas": {},
+      "z_score": 0.37868517445679173,
+      "percentile": 78.1793842034806,
+      "score": 78.1793842034806,
+      "stress_level": "stress",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 747,
+      "age_days": 3,
+      "history_start": "2023-11-20",
+      "history_end": "2026-11-19",
+      "median_3y": 0.0,
+      "p90_3y": 6.000000000000023,
+      "stress_feature": 3.000000000000025,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "available",
+          "value": 29.000000000000004,
+          "date": "2020-03-17"
+        },
+        "Banking_2023": {
+          "status": "available",
+          "value": 4.0000000000000036,
+          "date": "2023-03-31"
+        }
+      }
+    },
+    {
+      "id": "sofr_iorb",
+      "status": "ok",
+      "observation_date": "2026-11-19",
+      "current": 1.000000000000023,
+      "deltas": {
+        "1D": 1.000000000000023,
+        "5D": 1.000000000000023,
+        "20D": 3.000000000000025,
+        "60D": 1.000000000000023
+      },
+      "weekly_deltas": {},
+      "z_score": 0.8448632524436553,
+      "percentile": 85.40829986613119,
+      "score": 85.40829986613119,
+      "stress_level": "stress",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 747,
+      "age_days": 3,
+      "history_start": "2023-11-20",
+      "history_end": "2026-11-19",
+      "median_3y": -5.000000000000071,
+      "p90_3y": 3.000000000000025,
+      "stress_feature": 1.000000000000023,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "unavailable",
+          "value": null
+        },
+        "Banking_2023": {
+          "status": "available",
+          "value": -3.000000000000025,
+          "date": "2023-03-31"
+        }
+      }
+    },
+    {
+      "id": "bbb",
+      "status": "ok",
+      "observation_date": "2026-11-19",
+      "current": 1.17,
+      "deltas": {
+        "1D": 1.0000000000000009,
+        "5D": 5.999999999999983,
+        "20D": 5.999999999999983,
+        "60D": 18.999999999999993
+      },
+      "weekly_deltas": {},
+      "z_score": 0.6696449856007212,
+      "percentile": 78.16537467700259,
+      "score": 78.16537467700259,
+      "stress_level": "stress",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 774,
+      "age_days": 3,
+      "history_start": "2023-11-21",
+      "history_end": "2026-11-19",
+      "median_3y": 1.06,
+      "p90_3y": 1.25,
+      "stress_feature": 1.17,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "unavailable",
+          "value": null
+        },
+        "Banking_2023": {
+          "status": "unavailable",
+          "value": null
+        }
+      }
+    },
+    {
+      "id": "hy",
+      "status": "ok",
+      "observation_date": "2026-11-19",
+      "current": 3.52,
+      "deltas": {
+        "1D": 4.999999999999982,
+        "5D": 31.999999999999986,
+        "20D": 12.00000000000001,
+        "60D": 89.00000000000001
+      },
+      "weekly_deltas": {},
+      "z_score": 1.385712319004351,
+      "percentile": 91.7312661498708,
+      "score": 91.7312661498708,
+      "stress_level": "severe",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 774,
+      "age_days": 3,
+      "history_start": "2023-11-21",
+      "history_end": "2026-11-19",
+      "median_3y": 3.02,
+      "p90_3y": 3.47,
+      "stress_feature": 3.52,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "unavailable",
+          "value": null
+        },
+        "Banking_2023": {
+          "status": "unavailable",
+          "value": null
+        }
+      }
+    },
+    {
+      "id": "bb",
+      "status": "ok",
+      "observation_date": "2026-11-19",
+      "current": 2.1,
+      "deltas": {
+        "1D": 5.000000000000027,
+        "5D": 27.0,
+        "20D": 0.0,
+        "60D": 57.00000000000001
+      },
+      "weekly_deltas": {},
+      "z_score": 1.0594135155557503,
+      "percentile": 88.56589147286822,
+      "score": 88.56589147286822,
+      "stress_level": "stress",
+      "trend": "→",
+      "worsening": false,
+      "cached": false,
+      "history_n": 774,
+      "age_days": 3,
+      "history_start": "2023-11-21",
+      "history_end": "2026-11-19",
+      "median_3y": 1.82,
+      "p90_3y": 2.12,
+      "stress_feature": 2.1,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "unavailable",
+          "value": null
+        },
+        "Banking_2023": {
+          "status": "unavailable",
+          "value": null
+        }
+      }
+    },
+    {
+      "id": "b",
+      "status": "ok",
+      "observation_date": "2026-11-19",
+      "current": 3.8,
+      "deltas": {
+        "1D": 6.999999999999984,
+        "5D": 40.99999999999997,
+        "20D": 33.999999999999986,
+        "60D": 104.0
+      },
+      "weekly_deltas": {},
+      "z_score": 1.965038098781819,
+      "percentile": 95.09043927648578,
+      "score": 95.09043927648578,
+      "stress_level": "severe",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 774,
+      "age_days": 3,
+      "history_start": "2023-11-21",
+      "history_end": "2026-11-19",
+      "median_3y": 3.04,
+      "p90_3y": 3.57,
+      "stress_feature": 3.8,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "unavailable",
+          "value": null
+        },
+        "Banking_2023": {
+          "status": "unavailable",
+          "value": null
+        }
+      }
+    },
+    {
+      "id": "ccc",
+      "status": "ok",
+      "observation_date": "2026-11-19",
+      "current": 13.61,
+      "deltas": {
+        "1D": 8.000000000000007,
+        "5D": 46.999999999999886,
+        "20D": 20.999999999999908,
+        "60D": 329.9999999999999
+      },
+      "weekly_deltas": {},
+      "z_score": 3.6777511630529274,
+      "percentile": 100.0,
+      "score": 100.0,
+      "stress_level": "severe",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 774,
+      "age_days": 3,
+      "history_start": "2023-11-21",
+      "history_end": "2026-11-19",
+      "median_3y": 9.08,
+      "p90_3y": 10.307,
+      "stress_feature": 13.61,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "unavailable",
+          "value": null
+        },
+        "Banking_2023": {
+          "status": "unavailable",
+          "value": null
+        }
+      }
+    },
+    {
+      "id": "ccc_bb",
+      "status": "ok",
+      "observation_date": "2026-11-19",
+      "current": 1151.0,
+      "deltas": {
+        "1D": 3.0,
+        "5D": 20.0,
+        "20D": 21.0,
+        "60D": 272.9999999999999
+      },
+      "weekly_deltas": {},
+      "z_score": 3.6373469935274145,
+      "percentile": 100.0,
+      "score": 100.0,
+      "stress_level": "severe",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 774,
+      "age_days": 3,
+      "history_start": "2023-11-21",
+      "history_end": "2026-11-19",
+      "median_3y": 719.0,
+      "p90_3y": 854.4000000000001,
+      "stress_feature": 1151.0,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "unavailable",
+          "value": null
+        },
+        "Banking_2023": {
+          "status": "unavailable",
+          "value": null
+        }
+      }
+    },
+    {
+      "id": "hy_bbb",
+      "status": "ok",
+      "observation_date": "2026-11-19",
+      "current": 235.0,
+      "deltas": {
+        "1D": 3.999999999999943,
+        "5D": 26.0,
+        "20D": 6.0,
+        "60D": 70.0
+      },
+      "weekly_deltas": {},
+      "z_score": 1.6919018220431177,
+      "percentile": 94.63824289405684,
+      "score": 94.63824289405684,
+      "stress_level": "severe",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 774,
+      "age_days": 3,
+      "history_start": "2023-11-21",
+      "history_end": "2026-11-19",
+      "median_3y": 195.0,
+      "p90_3y": 225.0,
+      "stress_feature": 235.0,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "unavailable",
+          "value": null
+        },
+        "Banking_2023": {
+          "status": "unavailable",
+          "value": null
+        }
+      }
+    },
+    {
+      "id": "discount_window",
+      "status": "ok",
+      "observation_date": "2026-11-18",
+      "current": 9055.0,
+      "deltas": {
+        "1D": null,
+        "5D": null,
+        "20D": null,
+        "60D": null
+      },
+      "weekly_deltas": {
+        "1W": -213.0,
+        "4W": -114.0,
+        "13W": 4017.0
+      },
+      "z_score": 1.8529740430682793,
+      "percentile": 94.87179487179488,
+      "score": 94.87179487179488,
+      "stress_level": "severe",
+      "trend": "↓",
+      "worsening": false,
+      "cached": false,
+      "history_n": 156,
+      "age_days": 4,
+      "history_start": "2023-11-22",
+      "history_end": "2026-11-18",
+      "median_3y": 4884.5,
+      "p90_3y": 7806.5,
+      "stress_feature": 9055.0,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "available",
+          "value": 50768.0,
+          "date": "2020-03-25"
+        },
+        "Banking_2023": {
+          "status": "available",
+          "value": 152853.0,
+          "date": "2023-03-15"
+        }
+      }
+    },
+    {
+      "id": "reserves",
+      "status": "ok",
+      "observation_date": "2026-11-18",
+      "current": 2979656.0,
+      "deltas": {
+        "1D": null,
+        "5D": null,
+        "20D": null,
+        "60D": null
+      },
+      "weekly_deltas": {
+        "1W": 19053.0,
+        "4W": 17049.0,
+        "13W": 44369.0
+      },
+      "z_score": -1.0780534790853162,
+      "percentile": 20.512820512820515,
+      "score": 44.87179487179487,
+      "stress_level": "normal",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 156,
+      "age_days": 4,
+      "history_start": "2023-11-22",
+      "history_end": "2026-11-18",
+      "median_3y": 3228909.5,
+      "p90_3y": 3497434.5,
+      "stress_feature": -0.5754728858738289,
+      "stress_feature_unit": "4W growth %, direction-adjusted",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "available",
+          "value": 1626469.0,
+          "date": "2020-02-26"
+        },
+        "Banking_2023": {
+          "status": "available",
+          "value": 2998303.0,
+          "date": "2023-03-01"
+        }
+      }
+    },
+    {
+      "id": "deposits",
+      "status": "ok",
+      "observation_date": "2026-11-11",
+      "current": 19825.171,
+      "deltas": {
+        "1D": null,
+        "5D": null,
+        "20D": null,
+        "60D": null
+      },
+      "weekly_deltas": {
+        "1W": -37.70140000000174,
+        "4W": 22.761499999996886,
+        "13W": 287.3819999999978
+      },
+      "z_score": 2.1486094208177575,
+      "percentile": 99.35897435897436,
+      "score": 80.12820512820512,
+      "stress_level": "stress",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 156,
+      "age_days": 11,
+      "history_start": "2023-11-15",
+      "history_end": "2026-11-11",
+      "median_3y": 18121.3739,
+      "p90_3y": 19421.33685,
+      "stress_feature": -0.11494308306267964,
+      "stress_feature_unit": "4W growth %, direction-adjusted",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "available",
+          "value": 13328.8042,
+          "date": "2020-02-05"
+        },
+        "Banking_2023": {
+          "status": "available",
+          "value": 17209.3617,
+          "date": "2023-04-26"
+        }
+      }
+    },
+    {
+      "id": "bank_credit",
+      "status": "ok",
+      "observation_date": "2026-11-11",
+      "current": 20133.1843,
+      "deltas": {
+        "1D": null,
+        "5D": null,
+        "20D": null,
+        "60D": null
+      },
+      "weekly_deltas": {
+        "1W": 62.28009999999995,
+        "4W": 142.21210000000065,
+        "13W": 326.64080000000104
+      },
+      "z_score": 1.9798713898109137,
+      "percentile": 100.0,
+      "score": 4.487179487179487,
+      "stress_level": "normal",
+      "trend": "↓",
+      "worsening": false,
+      "cached": false,
+      "history_n": 156,
+      "age_days": 11,
+      "history_start": "2023-11-15",
+      "history_end": "2026-11-11",
+      "median_3y": 18367.61955,
+      "p90_3y": 19762.1698,
+      "stress_feature": -0.7113816105451809,
+      "stress_feature_unit": "4W growth %, direction-adjusted",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "available",
+          "value": 13904.8121,
+          "date": "2020-02-12"
+        },
+        "Banking_2023": {
+          "status": "available",
+          "value": 17308.7434,
+          "date": "2023-05-31"
+        }
+      }
+    },
+    {
+      "id": "vix",
+      "status": "ok",
+      "observation_date": "2026-11-19",
+      "current": 28.44,
+      "deltas": {
+        "1D": 3.8800000000000026,
+        "5D": 9.740000000000002,
+        "20D": 9.41,
+        "60D": 13.930000000000001
+      },
+      "weekly_deltas": {},
+      "z_score": 2.5189749943115847,
+      "percentile": 97.67441860465117,
+      "score": 97.67441860465117,
+      "stress_level": "severe",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 774,
+      "age_days": 3,
+      "history_start": "2023-11-20",
+      "history_end": "2026-11-19",
+      "median_3y": 16.43,
+      "p90_3y": 22.346000000000004,
+      "stress_feature": 28.44,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "available",
+          "value": 82.69,
+          "date": "2020-03-16"
+        },
+        "Banking_2023": {
+          "status": "available",
+          "value": 26.52,
+          "date": "2023-03-13"
+        }
+      }
+    },
+    {
+      "id": "nfci",
+      "status": "ok",
+      "observation_date": "2026-11-13",
+      "current": -0.478,
+      "deltas": {
+        "1D": null,
+        "5D": null,
+        "20D": null,
+        "60D": null
+      },
+      "weekly_deltas": {
+        "1W": -0.0050000000000000044,
+        "4W": -0.0020000000000000018,
+        "13W": 0.07000000000000006
+      },
+      "z_score": -0.2132160109604404,
+      "percentile": 49.67948717948718,
+      "score": 49.67948717948718,
+      "stress_level": "normal",
+      "trend": "→",
+      "worsening": false,
+      "cached": false,
+      "history_n": 156,
+      "age_days": 9,
+      "history_start": "2023-11-17",
+      "history_end": "2026-11-13",
+      "median_3y": -0.477,
+      "p90_3y": -0.378,
+      "stress_feature": -0.478,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "available",
+          "value": 0.313,
+          "date": "2020-04-03"
+        },
+        "Banking_2023": {
+          "status": "available",
+          "value": -0.145,
+          "date": "2023-03-31"
+        }
+      }
+    },
+    {
+      "id": "stlfsi",
+      "status": "ok",
+      "observation_date": "2026-11-13",
+      "current": -0.8655,
+      "deltas": {
+        "1D": null,
+        "5D": null,
+        "20D": null,
+        "60D": null
+      },
+      "weekly_deltas": {
+        "1W": -0.37540000000000007,
+        "4W": -0.23310000000000008,
+        "13W": -0.040000000000000036
+      },
+      "z_score": -1.147711322961275,
+      "percentile": 7.051282051282051,
+      "score": 7.051282051282051,
+      "stress_level": "normal",
+      "trend": "↓",
+      "worsening": false,
+      "cached": false,
+      "history_n": 156,
+      "age_days": 9,
+      "history_start": "2023-11-17",
+      "history_end": "2026-11-13",
+      "median_3y": -0.63635,
+      "p90_3y": -0.32445,
+      "stress_feature": -0.8655,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "available",
+          "value": 5.6388,
+          "date": "2020-03-20"
+        },
+        "Banking_2023": {
+          "status": "available",
+          "value": 1.1362,
+          "date": "2023-03-17"
+        }
+      }
+    },
+    {
+      "id": "curve_2s10s",
+      "status": "ok",
+      "observation_date": "2026-11-20",
+      "current": 0.29,
+      "deltas": {
+        "1D": 0.9999999999999953,
+        "5D": 1.9999999999999962,
+        "20D": -2.0000000000000018,
+        "60D": -18.0
+      },
+      "weekly_deltas": {},
+      "z_score": 0.17155861960025626,
+      "percentile": 42.05607476635514,
+      "score": 57.94392523364486,
+      "stress_level": "watch",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 749,
+      "age_days": 2,
+      "history_start": "2023-11-20",
+      "history_end": "2026-11-20",
+      "median_3y": 0.35,
+      "p90_3y": 0.58,
+      "stress_feature": -0.29,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "available",
+          "value": 0.12,
+          "date": "2020-02-21"
+        },
+        "Banking_2023": {
+          "status": "available",
+          "value": -1.07,
+          "date": "2023-03-08"
+        }
+      }
+    },
+    {
+      "id": "curve_3m10y",
+      "status": "ok",
+      "observation_date": "2026-11-20",
+      "current": 0.6,
+      "deltas": {
+        "1D": -9.999999999999998,
+        "5D": -23.0,
+        "20D": -14.000000000000002,
+        "60D": -18.000000000000004
+      },
+      "weekly_deltas": {},
+      "z_score": 0.9578982266021319,
+      "percentile": 78.83845126835782,
+      "score": 21.16154873164219,
+      "stress_level": "normal",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 749,
+      "age_days": 2,
+      "history_start": "2023-11-20",
+      "history_end": "2026-11-20",
+      "median_3y": 0.02,
+      "p90_3y": 0.77,
+      "stress_feature": -0.6,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "available",
+          "value": -0.2,
+          "date": "2020-02-25"
+        },
+        "Banking_2023": {
+          "status": "available",
+          "value": -1.89,
+          "date": "2023-05-04"
+        }
+      }
+    },
+    {
+      "id": "real10y",
+      "status": "ok",
+      "observation_date": "2026-11-19",
+      "current": 2.88,
+      "deltas": {
+        "1D": 0.0,
+        "5D": 2.0000000000000018,
+        "20D": 12.00000000000001,
+        "60D": 50.0
+      },
+      "weekly_deltas": {},
+      "z_score": 3.1650527922838374,
+      "percentile": 98.3288770053476,
+      "score": 98.3288770053476,
+      "stress_level": "severe",
+      "trend": "↑",
+      "worsening": true,
+      "cached": false,
+      "history_n": 748,
+      "age_days": 3,
+      "history_start": "2023-11-20",
+      "history_end": "2026-11-19",
+      "median_3y": 1.98,
+      "p90_3y": 2.3930000000000007,
+      "stress_feature": 2.88,
+      "stress_feature_unit": "direction-adjusted level",
+      "history_sufficient": true,
+      "historical": {
+        "COVID_2020": {
+          "status": "available",
+          "value": 0.62,
+          "date": "2020-03-19"
+        },
+        "Banking_2023": {
+          "status": "available",
+          "value": 1.66,
+          "date": "2023-03-08"
+        }
+      }
+    }
+  ]
+}
