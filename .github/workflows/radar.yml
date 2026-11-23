@@ -5,6 +5,11 @@ on:
     - cron: "0 12 * * *"
     - cron: "17 12 * * *"
   workflow_dispatch:
+    inputs:
+      as_of:
+        description: 'Optional FRED vintage date (YYYY-MM-DD); blank uses UTC today'
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -34,13 +39,20 @@ jobs:
       - name: Check today's report
         id: daily
         shell: bash
+        env:
+          REQUESTED_AS_OF: ${{ inputs.as_of }}
         run: |
-          today=$(TZ=Asia/Shanghai date +%F)
+          today=${REQUESTED_AS_OF:-$(date -u +%F)}
+          if [[ ! "$today" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "::error::Invalid as_of date"
+            exit 1
+          fi
+          echo "as_of=$today" >> "$GITHUB_OUTPUT"
           complete=false
-          for report in reports/"${today}"_*/"${today}"-beginner.json; do
+          for report in reports/*/"${today}"-veteran.json; do
             [[ -s "$report" && -s "${report%.json}.md" ]] || continue
             if jq -e --arg day "$today" '
-              .as_of == $day and .mode == "beginner" and
+              .as_of == $day and .mode == "veteran" and
               .demo == false and .errors == {} and .summary.coverage == 1
             ' "$report" > /dev/null; then
               complete=true
@@ -71,7 +83,8 @@ jobs:
           mkdir -p "reports/$STAMP" logs
 
           python "$SCRIPT" \
-            --mode beginner \
+            --mode veteran \
+            --as-of "${{ steps.daily.outputs.as_of }}" \
             --output-dir "reports/$STAMP" \
             2>&1 | tee "logs/$STAMP.log"
 
